@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-uzh5210!*^ya)p8wn*=1ke182-c%-5*ei^is=ko(n^8chfs(%t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['zoomz-backend.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
