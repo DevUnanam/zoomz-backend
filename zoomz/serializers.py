@@ -46,12 +46,12 @@ class LoginSerializer(serializers.Serializer):
 class CarSerializer(serializers.ModelSerializer):
     class Meta:
         model = Car
-        fields = ['id', 'make', 'model', 'year', 'price', 'location', 'description', 'dealer']
+        fields = ['id', 'make', 'model', 'year', 'price', 'location', 'description', 'dealership']
 
 class DealershipSerializer(serializers.ModelSerializer):
     class Meta:
         model = Dealership
-        fields = ['id', 'name', 'location', 'phone', 'email', 'website']
+        fields = ['id', 'name', 'address', 'phone_number', 'email', 'website', 'description', 'rating', 'created_at']
 
 class FAQSerializer(serializers.ModelSerializer):
     class Meta:
@@ -61,4 +61,4 @@ class FAQSerializer(serializers.ModelSerializer):
 class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
-        fields = ['id', 'user', 'car', 'dealership', 'content', 'rating', 'created_at']
+        fields = ['id', 'user', 'car', 'dealership', 'review_text', 'rating', 'created_at']

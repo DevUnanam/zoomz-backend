@@ -65,15 +65,14 @@ class ContactInquiry(models.Model):
 # Review Model (User Reviews for Cars and Dealerships)
 class Review(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    dealership = models.ForeignKey(Dealership, on_delete=models.CASCADE, null=True, blank=True)
-    car = models.ForeignKey(Car, on_delete=models.CASCADE, null=True, blank=True)
+    dealership = models.ForeignKey('Dealership', on_delete=models.CASCADE, null=True, blank=True)
+    car = models.ForeignKey('Car', on_delete=models.CASCADE, null=True, blank=True)
     rating = models.DecimalField(max_digits=3, decimal_places=2)
     review_text = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f"Review by {self.user.username} for {self.car or self.dealership}"
-
 
 # Car Filter Model (Optional, for storing filter criteria)
 class CarFilter(models.Model):
