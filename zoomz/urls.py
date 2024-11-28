@@ -64,7 +64,7 @@ urlpatterns = [
     path('api/search/', SearchCarsView.as_view(), name='search-cars'),
     path('api/contact/', ContactDealershipView.as_view(), name='contact-dealership'),
     
-    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    path('api-doc/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
     
 ]
