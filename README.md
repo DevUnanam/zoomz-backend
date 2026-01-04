@@ -41,3 +41,6 @@ Admin Endpoints (if you have an admin panel for managing cars and dealerships):
 GET /api/admin/cars/: Admin can view all cars listed on the platform
 GET /api/admin/dealerships/: Admin can view all dealerships
 GET /api/admin/users/: Admin can view all users
+
+the front end will be built soon using django templating as well
+
